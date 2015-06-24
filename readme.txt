@@ -11,4 +11,10 @@ gcc recipe.c -o recipe.exe
 ●プログラム実行
 以下のコマンドを実行。
 
-recipe.exe
+recipe.exe (レシピ情報ファイル名)
+
+
+●レシピ情報
+ファイル名：自由に設定してください。
+形式：テキストファイル
+エンコード：Shift-JIS

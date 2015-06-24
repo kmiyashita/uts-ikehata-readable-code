@@ -3,13 +3,18 @@
 
 #define MAX_LENGTH 50
 
-int main(void) {
+int main(int argc, char *argv[]) {
 	
 	FILE* fp;
 	char   str[MAX_LENGTH];
 	
-	if ((fp = fopen("recipe-data.txt", "r")) == NULL) {
-		printf("ファイルが開けません。\n");
+	if (argc < 2) {
+		printf("ファイル名が入力されていません。\n");
+		exit(EXIT_FAILURE);
+	}
+	
+	if ((fp = fopen(argv[1], "r")) == NULL) {
+		printf("指定されたファイルが開けません。\n");
 		exit(EXIT_FAILURE);
 	}
 	
