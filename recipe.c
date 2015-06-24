@@ -13,9 +13,10 @@ int main(void) {
 		exit(EXIT_FAILURE);
 	}
 	
-	fgets(str, MAX_LENGTH, fp);
-	printf("%s\n", str);
-
+	while (fgets(str, MAX_LENGTH, fp)) {
+		printf("%s", str);
+	}
+	
 	fclose(fp);
 	
 	return 0;
