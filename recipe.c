@@ -7,6 +7,7 @@ int main(int argc, char *argv[]) {
 	
 	FILE* fp;
 	char   str[MAX_LENGTH];
+	int      id;
 	
 	if (argc < 2) {
 		printf("ファイル名が入力されていません。\n");
@@ -18,8 +19,8 @@ int main(int argc, char *argv[]) {
 		exit(EXIT_FAILURE);
 	}
 	
-	while (fgets(str, MAX_LENGTH, fp)) {
-		printf("%s", str);
+	for (id = 1; fgets(str, MAX_LENGTH, fp); id++) {
+		printf("%d:%s", id, str);
 	}
 	
 	fclose(fp);
