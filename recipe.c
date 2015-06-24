@@ -5,9 +5,9 @@
 
 int main(int argc, char *argv[]) {
 	
-	FILE* fp;
-	char   str[MAX_LENGTH];
-	int      id;
+	FILE*	fp;
+	char		str[MAX_LENGTH];
+	int		id;
 	
 	if (argc < 2) {
 		printf("ファイル名が入力されていません。\n");
