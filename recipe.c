@@ -10,12 +10,12 @@ int main(int argc, char *argv[]) {
 	int		id;
 	
 	if (argc < 2) {
-		printf("�t�@�C���������͂���Ă��܂���B\n");
+		printf("ファイル名が入力されていません。\n");
 		exit(EXIT_FAILURE);
 	}
 	
 	if ((fp = fopen(argv[1], "r")) == NULL) {
-		printf("�w�肳�ꂽ�t�@�C�����J���܂���B\n");
+		printf("指定されたファイルが開けません。\n");
 		exit(EXIT_FAILURE);
 	}
 	
